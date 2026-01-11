@@ -1,3 +1,3 @@
 # Marvins Frequency
 
-[Marvins Frequency](marvins-frequency.com) is my blog.
+[Marvins Frequency](http://marvins-frequency.com) is my blog.
