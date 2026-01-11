@@ -1,7 +1,7 @@
 # The URL the site will be built for
 base_url = "http://marvins-frequency.com"
 
-title = "Marvin's Frequency"
+title = "Marvins Frequency"
 
 default_language = "en"
 
