@@ -2,4 +2,4 @@
 
 [Marvins Frequency](http://marvins-frequency.com) is my blog.
 
-    I use [Terminus](https://github.com/ebkalderon/terminus) as theme.
+I use [Terminus](https://github.com/ebkalderon/terminus) as theme.
