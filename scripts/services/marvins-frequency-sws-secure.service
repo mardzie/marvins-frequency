@@ -1,0 +1,12 @@
+[Unit]
+Description=Start the SWS secure on boot to serve marvins-frequency blog.
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'cd /var/marvins-frequency && /usr/local/bin/sws -w /var/marvins-frequency/sws-secure.toml'
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target

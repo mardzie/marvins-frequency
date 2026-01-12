@@ -1,0 +1,12 @@
+[Unit]
+Description=Updater for marvins-frequency blog content. Upload "update.tar.gz" to /var/marvins-frequency to update.
+After=network.target
+
+[Service]
+ExecStart=/var/marvins-frequency/upload-watchdog.sh
+Type=simple
+Restart=on-failure
+
+[Install]
+WantedBy=marvins-frequency-sws.service
+RequiredBy=network.target

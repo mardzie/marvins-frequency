@@ -1,0 +1,12 @@
+[general]
+host = "0.0.0.0"
+port = 443
+root = "/var/marvins-frequency/marvins-frequency"
+
+log-level = "info"
+
+page404 = "./404.html"
+
+http2 = true
+http2-tls-cert = "/root/certs/XXX.crt"
+http2-tls-key = "/root/certs/private.key"
