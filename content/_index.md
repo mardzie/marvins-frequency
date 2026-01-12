@@ -18,6 +18,5 @@ After I get a valid TLS certificate so I can serve you juicy HTTPS content, alth
 ![xkcd comic red line through https](https://imgs.xkcd.com/comics/red_line_through_https.png)
 
 I would also prefer if the DNS finally catches up and resolves my [domain](marvins-frequency.com) properly.
-Until it's there, you can use both [IpV4](http://172.238.112.152) and [IpV6](http://2600:3c17::2000:75ff:fe2c:c3b2).
 
-Have a great day and we will hear us soon! (Not quite but you know what I mean.)
+Have a great day and we will hear us soon! (Not quite hear but you know what I mean.)
