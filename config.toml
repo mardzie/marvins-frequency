@@ -11,15 +11,17 @@ author = "Marvin D."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
+
 taxonomies = [
-	{ name = "tags", feed = true },
-	{ name = "categories", feed = true }
+	{ name = "categories", feed = true },
+	{ name = "tags", feed = true }
 ]
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
 [markdown]
+github_alerts = true
 
 [markdown.highlighting]
 theme = "catppuccin-mocha"
@@ -27,6 +29,14 @@ theme = "catppuccin-mocha"
 [extra]
 close_responsive_menu_on_resize = true
 favicon_emoji = "🫨"
+
+katex = true
+
+main_menu = [
+	{ name = "blog", url = "blog", trailing_slash = true },
+	{ name = "tags", url = "tags", trailing_slash = true },
+]
+
 socials = [
 	{ name = "email", url = "mailto:marvin@marvins-frequency.com" },
 	{ name = "github", url = "https://github.com/mardzie" },
@@ -35,6 +45,6 @@ socials = [
 [extra.content_security_policy]
 enable = true
 allowed_domains = [
-	{ directive = "img-src", domains = ["'self'", "https://imgs.xkcd.com"]}
+	{ directive = "img-src", domains = ["'self'", "https://imgs.xkcd.com", "https://i.kym-cdn.com"]},
 ]
 

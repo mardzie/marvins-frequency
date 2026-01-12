@@ -1,5 +1,10 @@
 +++
-paginate_by = 5
+title = "Home"
+description = "The homepage of marvins-frequency.com"
+
+[extra]
+section_path = "blog/_index.md"
+max_posts = 5
 +++
 
 # Hello World
