@@ -21,10 +21,9 @@ log () {
 
 while true
 do
-	if [[ ! -f "$FILE" ]]; then
+	while [[ ! -f "$FILE" ]]; do
 		sleep 60
-		continue
-	fi
+	end
 
 	echo "Update detected..."
 	log "Updating..."
@@ -55,7 +54,5 @@ do
 
 	echo "Update successful!"
 	log "Updated successfully!"
-
-	# Wait 5 mins after update. The missing minute is added on top.
-	sleep 300
 done
+
