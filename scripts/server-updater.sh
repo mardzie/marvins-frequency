@@ -27,7 +27,7 @@ update_scripts () {
 	
 	# upload-watchdog.sh
 	cp $SRC_SCRIPTS_PATH/upload-watchdog.sh .
-	restart_script $UPDATER_SERVICE 
+	restart_service $UPDATER_SERVICE 
 
 	echo "done."
 }
