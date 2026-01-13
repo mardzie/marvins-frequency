@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ROOT="${${1}%/}"
+ROOT="${1%/}"
 FILE=update.tar.gz
 FILE_PATH=$ROOT/$FILE
 BLOG_PATH=$ROOT/marvins-frequency
