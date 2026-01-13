@@ -57,7 +57,7 @@ echo "Watching $ROOT"
 while true; do
 	if [[ -f "$FILE_PATH" ]]; then
 		sleep 3
-		update "${path%/}/$file"
+		update $FILE_PATH
 	fi
 
 	sleep 120
