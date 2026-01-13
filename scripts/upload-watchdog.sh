@@ -1,7 +1,7 @@
 #! /bin/bash
 
-ROOT=/var/marvins-frequency
-FILE=$ROOT/update.tar.gz
+ROOT=$1
+FILE=update.tar.gz
 BLOG_PATH=$ROOT/marvins-frequency
 LOG_FILE=$ROOT/update.log
 ERR_LOG_FILE=$ROOT/update-error.log
@@ -19,12 +19,7 @@ log () {
 	echo $1 > $LOG_FILE
 }
 
-while true
-do
-	while [[ ! -f "$FILE" ]]; do
-		sleep 60
-	done
-
+update () {
 	echo "Update detected..."
 	log "Updating..."
 
@@ -37,7 +32,7 @@ do
 	echo "done."
 
 	echo "Extracting update..."
-	tar -xzf $FILE -C $BLOG_PATH
+	tar -xzf $1 -C $BLOG_PATH
 	if [[ $? -ne 0 ]]; then
 		err_log "Failed to extract new data."
 		continue
@@ -45,7 +40,7 @@ do
 	echo "done."
 
 	echo "Cleaning up..."
-	rm -f $FILE
+	rm -f $1
 	if [[ $? -ne 0 ]]; then
 		err_log "Failed to delete archive."
 		continue
@@ -54,5 +49,11 @@ do
 
 	echo "Update successful!"
 	log "Updated successfully!"
+}
+
+inotifywait -m -e create $ROOT | while read path action file; do
+	if [[ "$file" == "$FILE" ]]; then
+		update "${path%/}/$file"
+	fi
 done
 
