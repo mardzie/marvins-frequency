@@ -79,7 +79,7 @@ help () {
 }
 
 case $1 in
-	git | scripts | configs | services | all)
+	git | scripts | configs | services | self | all)
 		echo "Updating..."
 		# Git is in every command.
 		git_pull
