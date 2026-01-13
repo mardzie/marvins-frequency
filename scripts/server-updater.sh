@@ -57,7 +57,7 @@ update_services () {
 	cp "$SRC_SERVICES_PATH/$SERVICE_BASE_NAME-sws-secure.service" $TGT_SERVICES_PATH
 
 	systemctl daemon-reload
-	resart_service $UPDATER_SERVICE
+	restart_service $UPDATER_SERVICE
 	restart_service $SWS_SERVICE
 	restart_service $SWS_SECURE_SERVICE
 
