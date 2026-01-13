@@ -40,7 +40,7 @@ update_configs() {
 }
 
 update_services () {
-	SERVICE_BASE_NAME="marvins-frequency-"
+	SERVICE_BASE_NAME="marvins-frequency"
 	UPDATER_SERVICE="${SERVICE_BASE_NAME}updater.service"
 	SWS_SERVICE="${SERVICE_BASE_NAME}sws.service"
 	SWS_SECURE_SERVICE="${SERVICE_BASE_NAME}sws-secure.service"
