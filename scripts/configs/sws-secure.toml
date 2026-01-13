@@ -8,5 +8,5 @@ log-level = "error"
 page404 = "./404.html"
 
 http2 = true
-http2-tls-cert = "/etc/ssl/XXX.ca"
-http2-tls-key = "/etc/ssl/private/XXX.key"
+http2-tls-cert = "/etc/letsencrypt/live/marvins-frequency.com/fullchain.pem"
+http2-tls-key = "/etc/letsencrypt/live/marvins-frequency.com/privkey.pem"
