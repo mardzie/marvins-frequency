@@ -7,6 +7,10 @@ SRC_SERVICES_PATH=$SRC_SCRIPTS_PATH/services
 
 TGT_SERVICES_PATH=/etc/systemd/system
 
+restart_service () {
+	systemctl restart $1
+}
+
 git_pull () {
 	echo "Updating repo..."
 	(cd $REPO_PATH && git pull)
@@ -18,6 +22,7 @@ update_scripts () {
 	
 	# upload-watchdog.sh
 	cp $SRC_SCRIPTS_PATH/upload-watchdog.sh .
+	restart_script $SRC_SCRIPTS_PATH/upload-watchdog.sh 
 
 	echo "done."
 }
@@ -39,10 +44,6 @@ update_services () {
 	UPDATER_SERVICE="${SERVICE_BASE_NAME}updater.service"
 	SWS_SERVICE="${SERVICE_BASE_NAME}sws.service"
 	SWS_SECURE_SERVICE="${SERVICE_BASE_NAME}sws-secure.service"
-
-	restart_service () {
-		systemctl restart $1
-	}
 
 	echo "Updating services..."
 
