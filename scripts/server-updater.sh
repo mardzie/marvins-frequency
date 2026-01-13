@@ -95,7 +95,7 @@ case $1 in
 				update_services
 				;;
 			self)
-				cp $SRC_SCRIPTS_PATH/server-scripts-updater.sh .
+				cp $SRC_SCRIPTS_PATH/server-updater.sh .
 				;;
 			all)
 				update_scripts
