@@ -27,7 +27,7 @@ update () {
 	rm -rf $BLOG_PATH/*
 	if [[ $? -ne 0 ]]; then
 		err_log "Failed to delete old data."
-		continue
+		exit 1
 	fi
 	echo "done."
 
@@ -35,7 +35,7 @@ update () {
 	tar -xzf $1 -C $BLOG_PATH
 	if [[ $? -ne 0 ]]; then
 		err_log "Failed to extract new data."
-		continue
+		exit 1
 	fi
 	echo "done."
 
@@ -43,13 +43,15 @@ update () {
 	rm -f $1
 	if [[ $? -ne 0 ]]; then
 		err_log "Failed to delete archive."
-		continue
+		exit 1
 	fi
 	echo "done."
 
 	echo "Update successful!"
 	log "Updated successfully!"
 }
+
+echo "Watching $ROOT"
 
 inotifywait -m -e create $ROOT | while read path action file; do
 	if [[ "$file" == "$FILE" ]]; then
