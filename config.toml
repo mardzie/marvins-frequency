@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://marvins-frequency.com"
+base_url = "https://marvins-frequency.com"
 
 title = "Marvins Frequency"
 
