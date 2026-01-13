@@ -16,6 +16,8 @@ I will split this post into two sections:
 - The Server
 - My editing space
 
+Here is the GitHub [repository](https://github.com/mardzie/marvins-frequency) where this blogs source lives at.
+
 I will start with my editing space but first an overview.
 
 I start with editing configs and [Markdown](https://commonmark.org) files with [Neovim](https://neovim.io/) to configure and write posts.
@@ -24,4 +26,4 @@ On my Linode server runs a Bash script as a [systemd](https://systemd.io/) servi
 After that [SWS](https://static-web-server.net) serves it to you.
 
 # Editing space
-I use [Zola](https://www.getzola.org/) to generate this blog. 
+
