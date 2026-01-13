@@ -23,7 +23,7 @@ while true
 do
 	while [[ ! -f "$FILE" ]]; do
 		sleep 60
-	end
+	done
 
 	echo "Update detected..."
 	log "Updating..."
