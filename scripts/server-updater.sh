@@ -8,9 +8,9 @@ SRC_SERVICES_PATH=$SRC_SCRIPTS_PATH/services
 TGT_SERVICES_PATH=/etc/systemd/system
 
 SERVICE_BASE_NAME="marvins-frequency"
-UPDATER_SERVICE="${SERVICE_BASE_NAME}updater.service"
-SWS_SERVICE="${SERVICE_BASE_NAME}sws.service"
-SWS_SECURE_SERVICE="${SERVICE_BASE_NAME}sws-secure.service"
+UPDATER_SERVICE="${SERVICE_BASE_NAME}-updater.service"
+SWS_SERVICE="${SERVICE_BASE_NAME}-sws.service"
+SWS_SECURE_SERVICE="${SERVICE_BASE_NAME}-sws-secure.service"
 
 restart_service () {
 	systemctl restart $1
