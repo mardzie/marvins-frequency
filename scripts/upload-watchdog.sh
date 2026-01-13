@@ -1,7 +1,8 @@
 #! /bin/bash
 
-ROOT=$1
+ROOT="${$1%/}"
 FILE=update.tar.gz
+FILE_PATH=$ROOT/$FILE
 BLOG_PATH=$ROOT/marvins-frequency
 LOG_FILE=$ROOT/update.log
 ERR_LOG_FILE=$ROOT/update-error.log
@@ -53,9 +54,11 @@ update () {
 
 echo "Watching $ROOT"
 
-inotifywait -m -e create $ROOT | while read path action file; do
-	if [[ "$file" == "$FILE" ]]; then
+while true; do
+	if [[ -f "$FILE_PATH" ]]; then
+		sleep 3
 		update "${path%/}/$file"
 	fi
-done
 
+	sleep 120
+done
