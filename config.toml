@@ -35,6 +35,9 @@ katex = true
 main_menu = [
 	{ name = "blog", url = "blog", trailing_slash = true },
 	{ name = "tags", url = "tags", trailing_slash = true },
+	{ name = "about", url = "about", trailing_slash = true },
+	{ name = "contact", url = "contact", trailing_slash = true },
+	{ name = "impressum", url = "impressum", trailing_slash = true },
 ]
 
 socials = [

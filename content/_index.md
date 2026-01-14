@@ -1,6 +1,6 @@
 +++
 title = "Home"
-description = "The homepage of marvins-frequency.com"
+description = "The homepage of marvins-frequency.com: the blog about tech."
 
 [extra]
 section_path = "blog/_index.md"
@@ -19,9 +19,5 @@ This includes:
 
 I want this blog to go quite technical, but there will be some higher level posts that just give a nice overview.
 
-After I get a valid TLS certificate so I can serve you juicy HTTPS content, although HTTP will stay available for you to use, I will start to upload posts.
-![xkcd comic red line through https](https://imgs.xkcd.com/comics/red_line_through_https.png)
-
-I would also prefer if the DNS finally catches up and resolves my [domain](marvins-frequency.com) properly.
-
 Have a great day and we will hear us soon! (Not quite hear but you know what I mean.)
+
