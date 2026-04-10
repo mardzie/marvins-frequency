@@ -48,6 +48,6 @@ socials = [
 [extra.content_security_policy]
 enable = true
 allowed_domains = [
-	{ directive = "img-src", domains = ["'self'", "https://imgs.xkcd.com", "https://i.kym-cdn.com"]},
+	{ directive = "img-src", domains = ["'self'", "https://imgs.xkcd.com", "https://i.kym-cdn.com", "https://heltec.org"] },
 ]
 

@@ -10,6 +10,8 @@ categories = ["meshtastic", "radio"]
 
 My friend gifted me a Heltec V4 Expansion Kit last month and I ran into a few problems but the overall use experience was great.
 
+![Heltec V4 WiFi LoRa 32 Expansion Kit with Touch Screen](https://heltec.org/wp-content/uploads/2025/10/V421.png)
+
 That friend also warned me that at that time there wasn't a firmware available for this extension kit with touch screen.
 I ignored that and flashed the newest available firmware from Heltec's website to the device.
 
